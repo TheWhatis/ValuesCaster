@@ -1,4 +1,4 @@
-# Классы-помощники для работы с массивами
+# Библиотека для создания своих правил преобразования php
 ## Документация
   * [Documentation](https://github.com/TheWhatis/PhpCast/tree/master/docs/markdown/index.md "Documentation")
 ## Установка

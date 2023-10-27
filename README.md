@@ -41,7 +41,7 @@ $array = [
 // с помощью ООП
 $cast = new Cast([
     'array.key' => new Casts\Integer(),
-    '[string].entryarray => new Casts\Integer(['this arguments'])
+    '[string].entryarray' => new Casts\Integer(['this arguments'])
 ]);
 var_dump($cast->cast());
 // > [

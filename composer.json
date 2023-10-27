@@ -1,0 +1,47 @@
+{
+    "name": "whatis/php-cast",
+    "version": "1.0.0",
+    "description": "Библиотека для создания своих правил преобразования",
+    "type": "library",
+    "keywords": [
+        "whatis",
+        "casts",
+        "php",
+        "cast",
+        "composer",
+        "library"
+    ],
+    "require": {
+        "php": "^8.2",
+        "whatis/support-arr": "^1.1.8"
+    },
+    "license": "unlicense",
+    "autoload": {
+        "psr-4": {
+            "Whatis\\PhpCast\\": ["src/", "src/cast"],
+            "Whatis\\PhpCast\\Casts\\": "src/casts",
+            "Whatis\\PhpCast\\Traits\\": "src/traits"
+        }
+    },
+    "authors": [
+        {
+            "name": "Whatis",
+            "email": "anton-gogo@mail.ru",
+            "homepage": "https://github.com/TheWhatis",
+            "role": "Developer"
+        }
+    ],
+    "scripts": {
+        "phpdoc-html": [
+            "phpdoc -d src -t docs/html"
+        ],
+        "phpdoc-markdown": [
+            "phpdoc -d src -t docs/markdown --template=vendor/saggre/phpdocumentor-markdown/themes/markdown"
+        ],
+        "phpdoc": [ "@phpdoc-html", "@phpdoc-markdown" ]
+    },
+    "require-dev": {
+        "php": "^8.2",
+        "saggre/phpdocumentor-markdown": "^0.1.3"
+    }
+}

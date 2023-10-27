@@ -18,7 +18,7 @@ This is an automatically generated documentation for **Documentation**.
 | Class | Description |
 |-------|-------------|
 | [`BaseCast`](./classes/Whatis/PhpCast/BaseCast.md) | Абстрактный класс правила<br />преобразования, реализующий<br />основные методы для его работы|
-| [`Cast`](./classes/Whatis/PhpCast/Cast.md) | Преобразовать в строку|
+| [`Cast`](./classes/Whatis/PhpCast/Cast.md) | Основной класс для работы<br />с преобразователями|
 
 
 #### Traits

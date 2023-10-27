@@ -63,7 +63,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Whatis\\PhpCast\\Cast",
             "name": "Cast",
-            "summary": "\u041F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u044C\u0020\u0432\u0020\u0441\u0442\u0440\u043E\u043A\u0443",
+            "summary": "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439\u0020\u043A\u043B\u0430\u0441\u0441\u0020\u0434\u043B\u044F\u0020\u0440\u0430\u0431\u043E\u0442\u044B\n\u0441\u0020\u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F\u043C\u0438",
             "url": "classes/Whatis-PhpCast-Cast.html"
         },                {
             "fqsen": "\\Whatis\\PhpCast\\Cast\u003A\u003A__construct\u0028\u0029",

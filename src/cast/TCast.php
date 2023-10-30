@@ -45,17 +45,6 @@ trait TCast
     }
 
     /**
-     * Отправлять ли исключительно значения,
-     * которые были пропущены
-     *
-     * @return bool
-     */
-    public static function onlyMissed(): bool
-    {
-        return false;
-    }
-
-    /**
      * Обработать переданные аргументы
      *
      * @param array $arguments Аргументы

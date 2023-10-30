@@ -31,7 +31,6 @@ use Whatis\PhpCast\Traits;
  */
 class Boolean extends BaseCast
 {
-    use Traits\NonMissed;
     use Traits\NonArgumentsParse;
 
     /**
@@ -45,26 +44,13 @@ class Boolean extends BaseCast
     }
 
     /**
-     * Обработать переданные аргументы
-     *
-     * @param array $arguments Аргументы
-     *
-     * @return array Обработанные аргументы
-     */
-    protected function parseArguments(array $arguments): array
-    {
-        return $arguments;
-    }
-
-    /**
      * Преобразовать в bool
      *
      * @param mixed $value Значение
-     * @param bool  $miss  Передано ли пропущенное значение
      *
      * @return bool
      */
-    public function cast(mixed $value, bool $miss = false): bool
+    public function cast(mixed $value): bool
     {
         return (bool) $value;
     }

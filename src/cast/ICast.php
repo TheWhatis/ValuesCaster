@@ -41,31 +41,4 @@ interface ICast
      * @return array|string $name Название преобразования
      */
     public static function getName(): array|string;
-
-    /**
-     * Отправлять ли значения, которые
-     * была пропущены - не переданы
-     * в массиве
-     *
-     * @return bool
-     */
-    public static function isMissed(): bool;
-
-    /**
-     * Отправлять ли исключительно значения,
-     * которые были пропущены
-     *
-     * @return bool
-     */
-    public static function onlyMissed(): bool;
-
-    /**
-     * Применить преобразование
-     *
-     * @param mixed $value Значение
-     * @param bool  $miss  Передано ли пропущенное значение
-     *
-     * @return mixed
-     */
-    public function cast(mixed $value, bool $miss = false): mixed;
 }

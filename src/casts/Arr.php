@@ -31,7 +31,6 @@ use Whatis\PhpCast\Traits;
  */
 class Arr extends BaseCast
 {
-    use Traits\NonMissed;
     use Traits\NonArgumentsParse;
 
     /**
@@ -48,11 +47,10 @@ class Arr extends BaseCast
      * Преобразовать в массив
      *
      * @param mixed $value Значение
-     * @param bool  $miss  Передано ли пропущенное значение
      *
      * @return array
      */
-    public function cast(mixed $value, bool $miss = false): array
+    public function cast(mixed $value): array
     {
         return (array) $value;
     }

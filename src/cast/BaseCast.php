@@ -29,7 +29,7 @@ namespace Whatis\PhpCast;
  * @license  unlicense
  * @link     https://github.com/TheWhatis/PhpCast
  */
-abstract class BaseCast implements ICast
+abstract class BaseCast implements ICast, Standart
 {
     use TCast;
 }

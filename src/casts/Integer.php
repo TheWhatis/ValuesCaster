@@ -31,7 +31,6 @@ use Whatis\PhpCast\Traits;
  */
 class Integer extends BaseCast
 {
-    use Traits\NonMissed;
     use Traits\NonArgumentsParse;
 
     /**
@@ -48,11 +47,10 @@ class Integer extends BaseCast
      * Преобразовать в int
      *
      * @param mixed $value Значение
-     * @param bool  $miss  Передано ли пропущенное значение
      *
      * @return int
      */
-    public function cast(mixed $value, bool $miss = false): int
+    public function cast(mixed $value): int
     {
         return (int) $value;
     }

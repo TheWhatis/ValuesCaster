@@ -31,7 +31,6 @@ use Whatis\PhpCast\Traits;
  */
 class Str extends BaseCast
 {
-    use Traits\NonMissed;
     use Traits\NonArgumentsParse;
 
     /**
@@ -48,11 +47,10 @@ class Str extends BaseCast
      * Преобразовать в строку
      *
      * @param mixed $value Значение
-     * @param bool  $miss  Передано ли пропущенное значение
      *
      * @return string
      */
-    public function cast(mixed $value, bool $miss = false): string
+    public function cast(mixed $value): string
     {
         return (string) $value;
     }

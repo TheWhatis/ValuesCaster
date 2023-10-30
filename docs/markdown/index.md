@@ -34,6 +34,10 @@ This is an automatically generated documentation for **Documentation**.
 | Interface | Description |
 |-----------|-------------|
 | [`ICast`](./classes/Whatis/PhpCast/ICast.md) | Интерфейс правила<br />преобразования|
+| [`IsMissed`](./classes/Whatis/PhpCast/IsMissed.md) | Интерфейс для ICast,<br />позволяющий получать<br />пропущенные в данных<br />значения|
+| [`OnlyMissed`](./classes/Whatis/PhpCast/OnlyMissed.md) | Интерфейс для `ICast`,<br />который ограничивает<br />получение данных до тех,<br />которые были пропущены|
+| [`Standart`](./classes/Whatis/PhpCast/Standart.md) | Интерфейс, дополняющий<br />`ICast` для непосредтвенно<br />метода, который позволяет<br />преобразовывать значения|
+| [`WithDataReference`](./classes/Whatis/PhpCast/WithDataReference.md) | Интерфейс, дополняющий<br />`ICast` для непосредтвенно<br />метода, который позволяет<br />преобразовывать значения|
 
 
 
@@ -61,13 +65,10 @@ This is an automatically generated documentation for **Documentation**.
 
 | Trait | Description |
 |-------|-------------|
-| [`IsMissed`](./classes/Whatis/PhpCast/Traits/IsMissed.md) | Трейт реализующий статичный<br />метод `isMissed` в true,<br />обозначая, что возможны<br />передачи значений, которые<br />были пропущены|
 | [`NonArgumentsParse`](./classes/Whatis/PhpCast/Traits/NonArgumentsParse.md) | Трейт, реализующий абстрактный<br />метод `parseArguments`<br />из `TCast`|
-| [`NonMissed`](./classes/Whatis/PhpCast/Traits/NonMissed.md) | Трейт реализующий статичный<br />метод `isMissed` и `onlyMissed`<br />в false, обозначая, что не<br />возможны передачи значений, которые<br />были пропущены|
-| [`OnlyMissed`](./classes/Whatis/PhpCast/Traits/OnlyMissed.md) | Трейт, который реализовывает<br />статичные методы для<br />преобразователей, которые<br />обозначают что в него<br />необходимо передавать<br />исключительно пропущенные<br />значения|
 
 
 
 
 ***
-> Automatically generated from source code comments on 2023-10-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-10-30 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

@@ -10,7 +10,8 @@
 PHP version 8
 
 * Full name: `\Whatis\PhpCast\Casts\ByDefault`
-* Parent class: [`\Whatis\PhpCast\BaseCast`](../BaseCast.md)
+* This class implements:
+[`\Whatis\PhpCast\ICast`](../ICast.md), [`\Whatis\PhpCast\OnlyMissed`](../OnlyMissed.md)
 
 **See Also:**
 
@@ -78,10 +79,10 @@ protected parseArguments(array $arguments): array
 
 ### cast
 
-Преобразовать в массив
+Установить значение по-умолчанию
 
 ```php
-public cast(mixed $value, bool $miss = false): mixed
+public cast(): mixed
 ```
 
 
@@ -90,13 +91,6 @@ public cast(mixed $value, bool $miss = false): mixed
 
 
 
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$value` | **mixed** | Значение |
-| `$miss` | **bool** | Передано ли пропущенное значение |
 
 
 
@@ -106,27 +100,6 @@ public cast(mixed $value, bool $miss = false): mixed
 
 ## Inherited methods
 
-
-### onlyMissed
-
-Отправлять ли исключительно значения,
-которые были пропущены
-
-```php
-public static onlyMissed(): bool
-```
-
-
-
-* This method is **static**.
-
-
-
-
-
-
-
-***
 
 ### __construct
 
@@ -186,4 +159,4 @@ protected parseArguments(array $arguments): array
 
 
 ***
-> Automatically generated from source code comments on 2023-10-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-10-30 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

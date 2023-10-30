@@ -91,28 +91,15 @@
             <div class="phpdocumentor-column -nine phpdocumentor-content">
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/whatis.html">Whatis</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/whatis-phpcast.html">PhpCast</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/whatis-phpcast-traits.html">Traits</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -trait">
-        <h2 class="phpdocumentor-content__title">
-    NonMissed
-    </h2>
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">OnlyMissed.php</h2>
 
-        <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/traits/NonMissed.php"><a href="files/src-traits-nonmissed.html"><abbr title="src/traits/NonMissed.php">NonMissed.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">35</span>
-
-    </aside>
-
-            <p class="phpdocumentor-summary">Трейт реализующий статичный
-метод `isMissed` и `onlyMissed`
-в false, обозначая, что не
-возможны передачи значений, которые
-были пропущены</p>
+            <p class="phpdocumentor-summary">Файл с интерфейсом для `ICast`,
+который ограничивает
+получение данных до тех,
+которые были пропущены</p>
 
     <section class="phpdocumentor-description"><p>PHP version 8</p>
 </section>
@@ -120,7 +107,7 @@
 
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="files/src-cast-onlymissed.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -129,7 +116,7 @@
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>Traits</p>
+                                                 <section class="phpdocumentor-description"><p>Cast</p>
 </section>
 
                                     </dd>
@@ -158,18 +145,28 @@
                                                                                                         <a class="phpdocumentor-tag-link" href="https://github.com/TheWhatis/PhpCast"> https://github.com/TheWhatis/PhpCast </a>
                     
                                     </dd>
-                                            </dl>
+                        </dl>
 
 
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="files/src-cast-onlymissed.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
 
 
+    <h4 id="toc-interfaces">
+        Interfaces
+        <a href="files/src-cast-onlymissed.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Whatis-PhpCast-OnlyMissed.html"><abbr title="\Whatis\PhpCast\OnlyMissed">OnlyMissed</abbr></a></dt><dd>Интерфейс для `ICast`,
+который ограничивает
+получение данных до тех,
+которые были пропущены</dd>    </dl>
 
 
 
@@ -177,30 +174,6 @@
 
 
 
-<h4 id="toc-methods">
-    Methods
-    <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
-
-</h4>
-<dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_isMissed">isMissed()</a>
-    <span>
-                                &nbsp;: bool    </span>
-</dt>
-<dd>Отправлять ли значения, которые
-была пропущены - не переданы
-в массиве</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_onlyMissed">onlyMissed()</a>
-    <span>
-                                &nbsp;: bool    </span>
-</dt>
-<dd>Отправлять ли исключительно значения,
-которые были пропущены</dd>
-
-    </dl>
 
 
 
@@ -208,95 +181,11 @@
         
 
         
-
-            <section class="phpdocumentor-methods">
-        <h3 class="phpdocumentor-elements__header" id="methods">
-            Methods
-            <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
-
-        </h3>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_isMissed">
-        isMissed()
-        <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_isMissed" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/traits/NonMissed.php"><a href="files/src-traits-nonmissed.html"><abbr title="src/traits/NonMissed.php">NonMissed.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">55</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Отправлять ли значения, которые
-была пропущены - не переданы
-в массиве</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">isMissed</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_onlyMissed">
-        onlyMissed()
-        <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_onlyMissed" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/traits/NonMissed.php"><a href="files/src-traits-nonmissed.html"><abbr title="src/traits/NonMissed.php">NonMissed.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">43</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Отправлять ли исключительно значения,
-которые были пропущены</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">onlyMissed</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
-            </section>
-
-</article>
-            </section>
-
         <div class="phpdocumentor-modal" id="source-view">
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/traits/NonMissed.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/cast/OnlyMissed.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -387,7 +276,7 @@
     </article>
                                 </section>
                 <section class="phpdocumentor-on-this-page__sidebar">
-                                
+                            
     <section class="phpdocumentor-on-this-page__content">
         <strong class="phpdocumentor-on-this-page__title">On this page</strong>
 
@@ -395,16 +284,11 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                                                <li><a href="classes/Whatis-PhpCast-Traits-NonMissed.html#toc-methods">Methods</a></li>
-                                    </ul>
+                                                                                    <li><a href="files/src-cast-onlymissed.html#toc-interfaces">Interfaces</a></li>
+                                                                                                                                        </ul>
             </li>
-                                                <li class="phpdocumentor-on-this-page-section__title">Methods</li>
-            <li>
-                <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_isMissed">isMissed()</a></li>
-                                            <li><a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_onlyMissed">onlyMissed()</a></li>
-                                    </ul>
-            </li>
+
+            
                     </ul>
     </section>
 
@@ -422,7 +306,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="files/src-cast-onlymissed.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

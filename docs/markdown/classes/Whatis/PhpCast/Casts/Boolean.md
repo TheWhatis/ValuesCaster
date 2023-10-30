@@ -43,42 +43,12 @@ $name Название преобразования
 
 ***
 
-### parseArguments
-
-Обработать переданные аргументы
-
-```php
-protected parseArguments(array $arguments): array
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$arguments` | **array** | Аргументы |
-
-
-**Return Value:**
-
-Обработанные аргументы
-
-
-
-***
-
 ### cast
 
 Преобразовать в bool
 
 ```php
-public cast(mixed $value, bool $miss = false): bool
+public cast(mixed $value): bool
 ```
 
 
@@ -93,7 +63,6 @@ public cast(mixed $value, bool $miss = false): bool
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$value` | **mixed** | Значение |
-| `$miss` | **bool** | Передано ли пропущенное значение |
 
 
 
@@ -103,49 +72,6 @@ public cast(mixed $value, bool $miss = false): bool
 
 ## Inherited methods
 
-
-### onlyMissed
-
-Отправлять ли исключительно значения,
-которые были пропущены
-
-```php
-public static onlyMissed(): bool
-```
-
-
-
-* This method is **static**.
-
-
-
-
-
-
-
-***
-
-### isMissed
-
-Отправлять ли значения, которые
-была пропущены - не переданы
-в массиве
-
-```php
-public static isMissed(): bool
-```
-
-
-
-* This method is **static**.
-
-
-
-
-
-
-
-***
 
 ### parseArguments
 
@@ -205,4 +131,4 @@ public __construct(array $arguments = []): mixed
 
 
 ***
-> Automatically generated from source code comments on 2023-10-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-10-30 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

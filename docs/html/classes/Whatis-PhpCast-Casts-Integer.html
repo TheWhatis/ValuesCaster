@@ -114,7 +114,7 @@
     
             <span class="phpdocumentor-element__extends">
             Uses
-                            <a href="classes/Whatis-PhpCast-Traits-NonMissed.html"><abbr title="\Whatis\PhpCast\Traits\NonMissed">NonMissed</abbr></a>,                             <a href="classes/Whatis-PhpCast-Traits-NonArgumentsParse.html"><abbr title="\Whatis\PhpCast\Traits\NonArgumentsParse">NonArgumentsParse</abbr></a>                    </span>
+                            <a href="classes/Whatis-PhpCast-Traits-NonArgumentsParse.html"><abbr title="\Whatis\PhpCast\Traits\NonArgumentsParse">NonArgumentsParse</abbr></a>                    </span>
     </h2>
 
 <div class="phpdocumentor-label-line">
@@ -234,23 +234,6 @@
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Получить название преобразования</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_isMissed">isMissed()</a>
-    <span>
-                                &nbsp;: bool    </span>
-</dt>
-<dd>Отправлять ли значения, которые
-была пропущены - не переданы
-в массиве</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Whatis-PhpCast-TCast.html#method_onlyMissed">onlyMissed()</a>
-    <span>
-                                &nbsp;: bool    </span>
-</dt>
-<dd>Отправлять ли исключительно значения,
-которые были пропущены</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Whatis-PhpCast-TCast.html#method_parseArguments">parseArguments()</a>
@@ -373,7 +356,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Obj.php"><a href="files/src-casts-obj.html"><abbr title="src/casts/Obj.php">Obj.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
 
     </aside>
 
@@ -381,7 +364,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">cast</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$miss</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object</span></code>
+                    <span class="phpdocumentor-signature__name">cast</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -394,15 +377,6 @@
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>Значение</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$miss</span>
-                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Передано ли пропущенное значение</p>
 </section>
 
             </dd>
@@ -430,7 +404,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Obj.php"><a href="files/src-casts-obj.html"><abbr title="src/casts/Obj.php">Obj.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">42</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
@@ -459,81 +433,6 @@
                     <article
         class="phpdocumentor-element
             -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_isMissed">
-        isMissed()
-        <a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_isMissed" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/traits/NonMissed.php"><a href="files/src-traits-nonmissed.html"><abbr title="src/traits/NonMissed.php">NonMissed.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">55</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Отправлять ли значения, которые
-была пропущены - не переданы
-в массиве</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">isMissed</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                    -static                    "
->
-    <h4 class="phpdocumentor-element__name" id="method_onlyMissed">
-        onlyMissed()
-        <a href="classes/Whatis-PhpCast-TCast.html#method_onlyMissed" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/cast/TCast.php"><a href="files/src-cast-tcast.html"><abbr title="src/cast/TCast.php">TCast.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">53</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Отправлять ли исключительно значения,
-которые были пропущены</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">onlyMissed</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
             -protected
                         -abstract                                "
 >
@@ -545,7 +444,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/cast/TCast.php"><a href="files/src-cast-tcast.html"><abbr title="src/cast/TCast.php">TCast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">65</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 
     </aside>
 
@@ -706,8 +605,6 @@
                                             <li><a href="classes/Whatis-PhpCast-TCast.html#method___construct">__construct()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Casts-Integer.html#method_cast">cast()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Casts-Integer.html#method_getName">getName()</a></li>
-                                            <li><a href="classes/Whatis-PhpCast-Traits-NonMissed.html#method_isMissed">isMissed()</a></li>
-                                            <li><a href="classes/Whatis-PhpCast-TCast.html#method_onlyMissed">onlyMissed()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-TCast.html#method_parseArguments">parseArguments()</a></li>
                                     </ul>
             </li>

@@ -47,7 +47,7 @@ class Integer extends BaseCast
      *
      * @return int
      */
-    public function cast(mixed $value = null): int
+    public function cast(mixed $value): int
     {
         return (int) $value;
     }

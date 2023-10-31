@@ -10,8 +10,7 @@
 PHP version 8
 
 * Full name: `\Whatis\PhpCast\Casts\ByDefault`
-* This class implements:
-[`\Whatis\PhpCast\ICast`](../ICast.md), [`\Whatis\PhpCast\OnlyMissed`](../OnlyMissed.md)
+* Parent class: [`\Whatis\PhpCast\BaseCast`](../BaseCast.md)
 
 **See Also:**
 
@@ -82,7 +81,7 @@ protected parseArguments(array $arguments): array
 Установить значение по-умолчанию
 
 ```php
-public cast(): mixed
+public cast(mixed $value): mixed
 ```
 
 
@@ -91,6 +90,12 @@ public cast(): mixed
 
 
 
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$value` | **mixed** |  |
 
 
 
@@ -138,7 +143,7 @@ protected parseArguments(array $arguments): array
 
 
 
-* This method is **abstract**.
+
 
 
 
@@ -159,4 +164,4 @@ protected parseArguments(array $arguments): array
 
 
 ***
-> Automatically generated from source code comments on 2023-10-30 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-10-31 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

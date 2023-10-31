@@ -73,36 +73,6 @@ public cast(mixed $value): bool
 ## Inherited methods
 
 
-### parseArguments
-
-Обработать переданные аргументы
-
-```php
-protected parseArguments(array $arguments): array
-```
-
-
-
-
-* This method is **abstract**.
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$arguments` | **array** | Аргументы |
-
-
-**Return Value:**
-
-Обработанные аргументы
-
-
-
-***
-
 ### __construct
 
 Иницилизация правила
@@ -129,6 +99,36 @@ public __construct(array $arguments = []): mixed
 
 ***
 
+### parseArguments
+
+Обработать переданные аргументы
+
+```php
+protected parseArguments(array $arguments): array
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$arguments` | **array** | Аргументы |
+
+
+**Return Value:**
+
+Обработанные аргументы
+
+
 
 ***
-> Automatically generated from source code comments on 2023-10-30 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+
+
+***
+> Automatically generated from source code comments on 2023-10-31 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

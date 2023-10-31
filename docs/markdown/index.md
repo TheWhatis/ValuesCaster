@@ -34,10 +34,19 @@ This is an automatically generated documentation for **Documentation**.
 | Interface | Description |
 |-----------|-------------|
 | [`ICast`](./classes/Whatis/PhpCast/ICast.md) | Интерфейс правила<br />преобразования|
-| [`IsMissed`](./classes/Whatis/PhpCast/IsMissed.md) | Интерфейс для ICast,<br />позволяющий получать<br />пропущенные в данных<br />значения|
-| [`OnlyMissed`](./classes/Whatis/PhpCast/OnlyMissed.md) | Интерфейс для `ICast`,<br />который ограничивает<br />получение данных до тех,<br />которые были пропущены|
-| [`Standart`](./classes/Whatis/PhpCast/Standart.md) | Интерфейс, дополняющий<br />`ICast` для непосредтвенно<br />метода, который позволяет<br />преобразовывать значения|
 | [`WithDataReference`](./classes/Whatis/PhpCast/WithDataReference.md) | Интерфейс, дополняющий<br />`ICast` для непосредтвенно<br />метода, который позволяет<br />преобразовывать значения|
+
+
+
+### \Whatis\PhpCast\Attributes
+
+#### Classes
+
+| Class | Description |
+|-------|-------------|
+| [`OnlyMissed`](./classes/Whatis/PhpCast/Attributes/OnlyMissed.md) | Класс атрибута-флага<br />обозначающий, что<br />в преобразователь<br />нужно передавать только<br />пропущенные значения|
+| [`WithMissed`](./classes/Whatis/PhpCast/Attributes/WithMissed.md) | Класс атрибута-флага<br />обозначающий, что<br />в преобразователь<br />нужно передавать ещё и<br />пропущенные значения|
+
 
 
 
@@ -57,18 +66,5 @@ This is an automatically generated documentation for **Documentation**.
 
 
 
-### \Whatis\PhpCast\Traits
-
-
-
-#### Traits
-
-| Trait | Description |
-|-------|-------------|
-| [`NonArgumentsParse`](./classes/Whatis/PhpCast/Traits/NonArgumentsParse.md) | Трейт, реализующий абстрактный<br />метод `parseArguments`<br />из `TCast`|
-
-
-
-
 ***
-> Automatically generated from source code comments on 2023-10-30 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-10-31 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

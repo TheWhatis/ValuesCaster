@@ -16,7 +16,6 @@
 namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\BaseCast;
-use Whatis\PhpCast\Traits;
 
 /**
  * Преобразовать в object
@@ -31,8 +30,6 @@ use Whatis\PhpCast\Traits;
  */
 class Integer extends BaseCast
 {
-    use Traits\NonArgumentsParse;
-
     /**
      * Получить название преобразования
      *

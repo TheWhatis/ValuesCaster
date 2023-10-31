@@ -51,5 +51,8 @@ trait TCast
      *
      * @return array Обработанные аргументы
      */
-    abstract protected function parseArguments(array $arguments): array;
+    protected function parseArguments(array $arguments): array
+    {
+        return $arguments;
+    }
 }

@@ -16,7 +16,6 @@
 namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\BaseCast;
-use Whatis\PhpCast\Traits;
 
 /**
  * Преобразовать в bool
@@ -31,8 +30,6 @@ use Whatis\PhpCast\Traits;
  */
 class Boolean extends BaseCast
 {
-    use Traits\NonArgumentsParse;
-
     /**
      * Получить название преобразования
      *

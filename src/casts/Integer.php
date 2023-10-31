@@ -16,7 +16,6 @@
 namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\BaseCast;
-use Whatis\PhpCast\Traits;
 
 /**
  * Преобразовать в int
@@ -31,8 +30,6 @@ use Whatis\PhpCast\Traits;
  */
 class Integer extends BaseCast
 {
-    use Traits\NonArgumentsParse;
-
     /**
      * Получить название преобразования
      *
@@ -50,7 +47,7 @@ class Integer extends BaseCast
      *
      * @return int
      */
-    public function cast(mixed $value): int
+    public function cast(mixed $value = null): int
     {
         return (int) $value;
     }

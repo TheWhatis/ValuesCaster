@@ -15,10 +15,8 @@
 
 namespace Whatis\PhpCast\Casts;
 
-use Whatis\PhpCast\ICast;
-use Whatis\PhpCast\OnlyMissed;
-
-use Whatis\PhpCast\TCast;
+use Whatis\PhpCast\BaseCast;
+use Whatis\PhpCast\Attributes\OnlyMissed;
 
 /**
  * Класс преобразователя
@@ -34,10 +32,9 @@ use Whatis\PhpCast\TCast;
  * @license  unlicense
  * @link     https://github.com/TheWhatis/PhpCast
  */
-class ByDefault implements ICast, OnlyMissed
+#[OnlyMissed]
+class ByDefault extends BaseCast
 {
-    use TCast;
-
     /**
      * Получить название преобразования
      *
@@ -65,7 +62,7 @@ class ByDefault implements ICast, OnlyMissed
      *
      * @return mixed
      */
-    public function cast(): mixed
+    public function cast(mixed $value): mixed
     {
         return array_key_exists('value', $this->arguments)
             ? $this->arguments['value']

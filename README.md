@@ -117,7 +117,6 @@ var_dump($cast->cast());
 namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\BaseCast;
-use Whatis\PhpCast\Traits;
 
 /**
  * Пример преобразователя
@@ -132,12 +131,10 @@ use Whatis\PhpCast\Traits;
  */
 class ExampleCast extends BaseCast
 {
-    use Traits\NonArgumentsParse;
-
     /**
      * Получить название преобразования
      *
-     * @return string $name Название преобразования
+     * @return string $name
      */
     public static function getName(): string
     {
@@ -180,8 +177,6 @@ use Whatis\PhpCast\BaseCast;
 
 use Whatis\PhpCast\WithDataReference;
 
-use Whatis\PhpCast\Traits;
-
 /**
  * Пример преобразователя
  *
@@ -195,8 +190,6 @@ use Whatis\PhpCast\Traits;
  */
 class WithDataReferenceExampleCast extends BaseCast implements WithDataReference
 {
-    use Traits\NonArgumentsParse;
-
     /**
      * Ссылка на данные
      *
@@ -207,7 +200,7 @@ class WithDataReferenceExampleCast extends BaseCast implements WithDataReference
     /**
      * Получить название преобразования
      *
-     * @return string $name Название преобразования
+     * @return string $name
      */
     public static function getName(): string
     {
@@ -215,10 +208,33 @@ class WithDataReferenceExampleCast extends BaseCast implements WithDataReference
     }
 
     /**
+     * Обработка аргументов
+     *
+     * Вы можете обработать поступающий аргументы
+     * с помощью этого метода
+     *
+     * Если не пропишите этот метод, то
+     * аргументы установятся в свойство
+     * `$this->arguments` без обработки
+     *
+     * Вернуть вы должны обработанные
+     * аргументы в виде массива
+     *
+     * @param array $arguments Аргументы
+     *
+     * @return array
+     */
+    protected functino parseArguments(array $arguments): array
+    {
+        // ... Обработка  аргументов
+        return $arguments;
+    }
+
+    /**
      * Установить ссылку на данные, которые
      * были переданы в Cast
      *
-     * @param array $data Данные
+     * @param array $data Ссылка на данные
      *
      * @return void
      */
@@ -259,12 +275,9 @@ class WithDataReferenceExampleCast extends BaseCast implements WithDataReference
 
 namespace Whatis\PhpCast\Casts;
 
-use Whatis\PhpCast\ICast;
-use Whatis\PhpCast\IsMissed;
-
+use Whatis\PhpCast\BaseCast;
+use Whatis\PhpCast\Attributes\WithMissed;
 use Whatis\PhpCast\WithDataReference;
-
-use Whatis\PhpCast\Traits;
 
 /**
  * Пример преобразователя
@@ -277,14 +290,13 @@ use Whatis\PhpCast\Traits;
  * @license  unlicense
  * @link     https://github.com/TheWhatis/PhpCast
  */
-class MissedExampleCast implements ICast, IsMissed
+#[WithMissed]
+class MissedExampleCast extends BaseCast implements WithDataReference
 {
-    use Traits\NonArgumentsParse;
-
     /**
      * Получить название преобразования
      *
-     * @return string $name Название преобразования
+     * @return string $name
      */
     public static function getName(): string
     {
@@ -324,12 +336,9 @@ class MissedExampleCast implements ICast, IsMissed
 
 namespace Whatis\PhpCast\Casts;
 
-use Whatis\PhpCast\ICast;
-use Whatis\PhpCast\OnlyMissed;
-
+use Whatis\PhpCast\BaseCast;
+use Whatis\PhpCast\Attributes\OnlyMissed;
 use Whatis\PhpCast\WithDataReference;
-
-use Whatis\PhpCast\Traits;
 
 /**
  * Пример преобразователя
@@ -342,14 +351,13 @@ use Whatis\PhpCast\Traits;
  * @license  unlicense
  * @link     https://github.com/TheWhatis/PhpCast
  */
-class OnlyMissedExampleCast implements ICast, OnlyMissed
+#[OnlyMissed]
+class OnlyMissedExampleCast extends BaseCast implements WithDataReference
 {
-    use Traits\NonArgumentsParse;
-
     /**
      * Получить название преобразования
      *
-     * @return string $name Название преобразования
+     * @return string $name
      */
     public static function getName(): string
     {
@@ -359,9 +367,11 @@ class OnlyMissedExampleCast implements ICast, OnlyMissed
     /**
      * Преобразование
      *
+     * @param mixed $value Значение
+     *
      * @return string
      */
-    public function cast(): string
+    public function cast(mixed $value): string
     {
         return 'newvalue';
     }

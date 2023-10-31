@@ -13,14 +13,14 @@
     ],
     "require": {
         "php": "^8.2",
-        "whatis/support-arr": "^1.1.8"
+        "whatis/support-arr": "^1.1.9"
     },
     "license": "unlicense",
     "autoload": {
         "psr-4": {
             "Whatis\\PhpCast\\": ["src/", "src/cast"],
             "Whatis\\PhpCast\\Casts\\": "src/casts",
-            "Whatis\\PhpCast\\Traits\\": "src/traits"
+            "Whatis\\PhpCast\\Attributes\\": "src/attributes"
         }
     },
     "authors": [

@@ -36,7 +36,7 @@ namespace Whatis\PhpCast;
  * на вашем классе
  *
  * В таком случае в `$value` будет передаваться
- * всегда null
+ * всегда `null`
  *
  * PHP version 8
  *

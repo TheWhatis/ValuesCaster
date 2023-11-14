@@ -56,7 +56,7 @@ $cast = new Cast([
     'array.key' => new Casts\Integer(),
     '[string].entryarray' => new Casts\Integer(['this arguments'])
 ]);
-var_dump($cast->cast());
+var_dump($cast->cast($array));
 // > [
 // >     'key' => 'value',
 // >     'array' => [
@@ -78,7 +78,7 @@ $cast = new Cast([
     '[int].key' => 'int',
     'array.new' => 'default:value::myvalue'
 ]);
-var_dump($cast->cast());
+var_dump($cast->cast($array));
 // > [
 // >     'key' => 'value',
 // >     'array' => [

@@ -1,6 +1,6 @@
 {
     "name": "whatis/php-cast",
-    "version": "3.0.3",
+    "version": "3.0.4",
     "description": "Библиотека для создания своих правил преобразования",
     "type": "library",
     "license": "unlicense",

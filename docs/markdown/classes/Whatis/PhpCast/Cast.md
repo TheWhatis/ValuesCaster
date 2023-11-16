@@ -6,7 +6,6 @@
 с преобразователями
 
 PHP version 8
-
 * Full name: `\Whatis\PhpCast\Cast`
 
 **See Also:**
@@ -160,7 +159,7 @@ public static init(array&lt;int,string&gt; $casts): void
 каждом вызове метод cast преобразователи
 не будут обновляться сами. Добавить
 новый преобразователь можно
-будет только методом {@see \Whatis\PhpCast\Cast::add()}
+будет только методом [\Whatis\PhpCast\Cast::add()]()
 
 * This method is **static**.
 
@@ -186,8 +185,8 @@ public static init(array&lt;int,string&gt; $casts): void
 protected missedKeys(array $data, string|int $key): \Generator
 ```
 
-Смотреть {@see \Whatis\PhpCast\Attributes\OnlyMissed} и
-{@see \Whatis\PhpCast\Attributes\WithMissed}
+Смотреть [\Whatis\PhpCast\Attributes\OnlyMissed]() и
+[\Whatis\PhpCast\Attributes\WithMissed]()
 
 
 
@@ -310,7 +309,7 @@ protected parseCast(string|array $cast): array
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$cast` | **string&#124;array** |  |
+| `$cast` | **string&#124;array** | Данные преобразователя |
 
 
 
@@ -345,4 +344,4 @@ public cast(array $data): array
 
 
 ***
-> Automatically generated from source code comments on 2023-10-31 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated on 2023-11-16

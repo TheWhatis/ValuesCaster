@@ -6,7 +6,6 @@
 `ICast`
 
 PHP version 8
-
 * Full name: `\Whatis\PhpCast\TCast`
 
 **See Also:**
@@ -93,5 +92,5 @@ protected parseArguments(array $arguments): array
 ***
 
 ***
-> Automatically generated from source code comments on 2023-10-31 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated on 2023-11-16
 

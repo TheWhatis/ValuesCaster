@@ -8,7 +8,6 @@
 по-умолчанию
 
 PHP version 8
-
 * Full name: `\Whatis\PhpCast\Casts\ByDefault`
 * Parent class: [`\Whatis\PhpCast\BaseCast`](../BaseCast.md)
 
@@ -164,4 +163,4 @@ protected parseArguments(array $arguments): array
 
 
 ***
-> Automatically generated from source code comments on 2023-10-31 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated on 2023-11-16

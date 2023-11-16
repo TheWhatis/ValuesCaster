@@ -97,7 +97,7 @@ class Cast
      * @param string $cast Класс преобразователя
      *
      * @return void
-     * @throw InvalidArgumentException
+     * @throw  InvalidArgumentException
      */
     public static function add(string $cast): void
     {
@@ -111,7 +111,9 @@ class Cast
         // преобразователя, выкидываем
         // исключение
         throw new InvalidArgumentException(
-            'Cast object must be implements from \'Whatis\PhpCast\ICast\', passed \'' . $cast . '\''
+            'Cast object must be implements from '
+                . '\'Whatis\PhpCast\ICast\', passed \''
+                . $cast . '\''
         );
     }
 
@@ -265,7 +267,7 @@ class Cast
      * @param string $name Название преобразователя
      *
      * @return string Класс преобразователя
-     * @throw InvalidArgumentException
+     * @throw  InvalidArgumentException
      */
     protected function searchCast(string $name): string
     {
@@ -310,10 +312,10 @@ class Cast
     /**
      * Обработать переданный преобразователь
      *
-     * @param string|array $cast
+     * @param string|array $cast Данные преобразователя
      *
      * @return array
-     * @throw InvalidArgumentException
+     * @throw  InvalidArgumentException
      */
     protected function parseCast(string|array $cast): ICast
     {
@@ -404,7 +406,7 @@ class Cast
      * @param array $data Данные
      *
      * @return array
-     * @throw InvalidArgumentException
+     * @throw  InvalidArgumentException
      */
     public function cast(array $data): array
     {
@@ -429,7 +431,10 @@ class Cast
             // преобразователя, выкидываем
             // исключение
             throw new InvalidArgumentException(
-                'Invalid passed cast type, must be \'string\', \'array\' or \'ICast\' object, passed: \'' . gettype($cast) . '\''
+                'Invalid passed cast type, must be '
+                    .'\'string\', \'array\' or \'ICast\' '
+                    . 'object, passed: \''
+                    . gettype($cast) . '\''
             );
         }
 

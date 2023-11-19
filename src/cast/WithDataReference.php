@@ -34,7 +34,7 @@ interface WithDataReference
 {
     /**
      * Установить ссылку на данные, которые
-     * были переданы в {@see Cast::cast()}
+     * были переданы в `Cast::cast()`
      *
      * @param array $data Данные
      *

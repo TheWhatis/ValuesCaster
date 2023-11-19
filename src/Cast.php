@@ -61,7 +61,7 @@ class Cast
      *
      * @param array $casts Правила преобразования
      */
-    public function __construct(array $casts)
+    public function __construct(array $casts = [])
     {
         $this->setCasts($casts);
 

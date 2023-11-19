@@ -193,7 +193,7 @@
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Whatis-PhpCast-Cast.html#property_casts">$casts</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
@@ -201,14 +201,14 @@
 <dd>Массив с ключами и правилами
 преобразования</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Whatis-PhpCast-Cast.html#property_declared">$declared</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;|null            </span>
 </dt>
 <dd>Объявленные преобразователи</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Whatis-PhpCast-Cast.html#property_declaredCasts">$declaredCasts</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
@@ -246,6 +246,13 @@
 <dd>Выполнить преобразования</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Whatis-PhpCast-Cast.html#method_getCasts">getCasts()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Получить список преобразователей</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Whatis-PhpCast-Cast.html#method_init">init()</a>
     <span>
                                 &nbsp;: void    </span>
@@ -260,13 +267,6 @@
                                 &nbsp;: void    </span>
 </dt>
 <dd>Установить новые преобразования</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Whatis-PhpCast-Cast.html#method_castUnit">castUnit()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Применить отдельное преобразование</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Whatis-PhpCast-Cast.html#method_missedKeys">missedKeys()</a>
@@ -315,7 +315,7 @@
         class="
             phpdocumentor-element
             -property
-            -public
+            -protected
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="property_casts">
@@ -336,7 +336,7 @@
 преобразования</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__visibility">protected</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$casts</span>
     </code>
@@ -350,7 +350,7 @@
         class="
             phpdocumentor-element
             -property
-            -public
+            -protected
             -static                                            "
 >
     <h4 class="phpdocumentor-element__name" id="property_declared">
@@ -370,7 +370,7 @@
         <p class="phpdocumentor-summary">Объявленные преобразователи</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__visibility">protected</span>
     <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;|null</span>
     <span class="phpdocumentor-signature__name">$declared</span>
      = <span class="phpdocumentor-signature__default-value">null</span></code>
@@ -384,7 +384,7 @@
         class="
             phpdocumentor-element
             -property
-            -public
+            -protected
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="property_declaredCasts">
@@ -404,7 +404,7 @@
         <p class="phpdocumentor-summary">Объявленные преобразователи</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__visibility">protected</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$declaredCasts</span>
     </code>
@@ -480,7 +480,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">102</span>
+    <span class="phpdocumentor-element-found-in__line">134</span>
 
     </aside>
 
@@ -540,7 +540,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">382</span>
 
     </aside>
 
@@ -593,6 +593,42 @@
         class="phpdocumentor-element
             -method
             -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getCasts">
+        getCasts()
+        <a href="classes/Whatis-PhpCast-Cast.html#method_getCasts" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">120</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Получить список преобразователей</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getCasts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                     -static                    "
 >
     <h4 class="phpdocumentor-element__name" id="method_init">
@@ -603,7 +639,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">135</span>
+    <span class="phpdocumentor-element-found-in__line">167</span>
 
     </aside>
 
@@ -655,7 +691,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">88</span>
+    <span class="phpdocumentor-element-found-in__line">89</span>
 
     </aside>
 
@@ -682,68 +718,21 @@
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Whatis-PhpCast-Cast.html#method_setCasts#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_castUnit">
-        castUnit()
-        <a href="classes/Whatis-PhpCast-Cast.html#method_castUnit" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">211</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Применить отдельное преобразование</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-                    <span class="phpdocumentor-signature__name">castUnit</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$data</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Whatis-PhpCast-ICast.html"><abbr title="\Whatis\PhpCast\ICast">ICast</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cast</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$data</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Ссылка на данные</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$key</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Ключ значения</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$cast</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Whatis-PhpCast-ICast.html"><abbr title="\Whatis\PhpCast\ICast">ICast</abbr></a></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Преобразователь</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                                            </dl>
 
     
 </article>
@@ -761,7 +750,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 
     </aside>
 
@@ -821,7 +810,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">320</span>
+    <span class="phpdocumentor-element-found-in__line">291</span>
 
     </aside>
 
@@ -884,7 +873,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">298</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 
     </aside>
 
@@ -932,7 +921,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cast.php"><a href="files/src-cast.html"><abbr title="src/Cast.php">Cast.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">272</span>
+    <span class="phpdocumentor-element-found-in__line">243</span>
 
     </aside>
 
@@ -1111,9 +1100,9 @@
                                             <li><a href="classes/Whatis-PhpCast-Cast.html#method___construct">__construct()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Cast.html#method_add">add()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Cast.html#method_cast">cast()</a></li>
+                                            <li><a href="classes/Whatis-PhpCast-Cast.html#method_getCasts">getCasts()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Cast.html#method_init">init()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Cast.html#method_setCasts">setCasts()</a></li>
-                                            <li><a href="classes/Whatis-PhpCast-Cast.html#method_castUnit">castUnit()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Cast.html#method_missedKeys">missedKeys()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Cast.html#method_parseCast">parseCast()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Cast.html#method_parseStringArguments">parseStringArguments()</a></li>

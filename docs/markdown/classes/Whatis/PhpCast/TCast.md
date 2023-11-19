@@ -83,10 +83,6 @@ protected parseArguments(array $arguments): array
 | `$arguments` | **array** | Аргументы |
 
 
-**Return Value:**
-
-Обработанные аргументы
-
 
 
 ***

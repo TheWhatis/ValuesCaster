@@ -23,7 +23,7 @@ PHP version 8
 преобразования
 
 ```php
-public array $casts
+protected array $casts
 ```
 
 
@@ -38,7 +38,7 @@ public array $casts
 Объявленные преобразователи
 
 ```php
-public static ?array $declared
+protected static ?array $declared
 ```
 
 
@@ -53,7 +53,7 @@ public static ?array $declared
 Объявленные преобразователи
 
 ```php
-public array $declaredCasts
+protected array $declaredCasts
 ```
 
 
@@ -112,6 +112,26 @@ public setCasts(array $casts): void
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$casts` | **array** | Правила преобразования |
+
+
+
+
+***
+
+### getCasts
+
+Получить список преобразователей
+
+```php
+public getCasts(): array
+```
+
+
+
+
+
+
+
 
 
 
@@ -199,34 +219,6 @@ protected missedKeys(array $data, string|int $key): \Generator
 |-----------|------|-------------|
 | `$data` | **array** | Данные |
 | `$key` | **string&#124;int** | Ключ |
-
-
-
-
-***
-
-### castUnit
-
-Применить отдельное преобразование
-
-```php
-protected castUnit(array& $data, string|int $key, \Whatis\PhpCast\ICast $cast): void
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$data` | **array** | Ссылка на данные |
-| `$key` | **string&#124;int** | Ключ значения |
-| `$cast` | **\Whatis\PhpCast\ICast** | Преобразователь |
 
 
 

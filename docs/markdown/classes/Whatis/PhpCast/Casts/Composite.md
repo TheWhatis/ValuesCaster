@@ -23,7 +23,7 @@ PHP version 8
 будет использоваться
 
 ```php
-public \Whatis\PhpCast\Cast $cast
+public ?\Whatis\PhpCast\Cast $cast
 ```
 
 
@@ -35,32 +35,6 @@ public \Whatis\PhpCast\Cast $cast
 
 ## Methods
 
-
-### __construct
-
-Иницилизация компановщика
-
-```php
-public __construct(array $arguments = []): mixed
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$arguments` | **array** | Аргументы |
-
-
-
-
-***
 
 ### getName
 
@@ -81,6 +55,33 @@ public static getName(): array
 **Return Value:**
 
 $name Название преобразования
+
+
+
+***
+
+### parseArguments
+
+Обработать переданные аргументы
+
+```php
+protected parseArguments(array $arguments): array
+```
+
+Валидация переданных преобразователей
+в композитор
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$arguments` | **array** | Аргументы |
+
 
 
 
@@ -164,10 +165,6 @@ protected parseArguments(array $arguments): array
 |-----------|------|-------------|
 | `$arguments` | **array** | Аргументы |
 
-
-**Return Value:**
-
-Обработанные аргументы
 
 
 

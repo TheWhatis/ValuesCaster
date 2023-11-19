@@ -81,6 +81,11 @@ Search.appendIndex(
             "summary": "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C\u0020\u043D\u043E\u0432\u044B\u0435\u0020\u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F",
             "url": "classes/Whatis-PhpCast-Cast.html#method_setCasts"
         },                {
+            "fqsen": "\\Whatis\\PhpCast\\Cast\u003A\u003AgetCasts\u0028\u0029",
+            "name": "getCasts",
+            "summary": "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C\u0020\u0441\u043F\u0438\u0441\u043E\u043A\u0020\u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439",
+            "url": "classes/Whatis-PhpCast-Cast.html#method_getCasts"
+        },                {
             "fqsen": "\\Whatis\\PhpCast\\Cast\u003A\u003Aadd\u0028\u0029",
             "name": "add",
             "summary": "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C\u0020\u043D\u043E\u0432\u044B\u0439\u0020\u043E\u0431\u044A\u044F\u0432\u043B\u0435\u043D\u043D\u044B\u0439\n\u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C",
@@ -95,11 +100,6 @@ Search.appendIndex(
             "name": "missedKeys",
             "summary": "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C\u0020\u043F\u0440\u043E\u043F\u0443\u0449\u0435\u043D\u043D\u044B\u0435\u0020\u043A\u043B\u044E\u0447\u0438\u0020\u0432\u0020\u0434\u0430\u043D\u043D\u044B\u0445",
             "url": "classes/Whatis-PhpCast-Cast.html#method_missedKeys"
-        },                {
-            "fqsen": "\\Whatis\\PhpCast\\Cast\u003A\u003AcastUnit\u0028\u0029",
-            "name": "castUnit",
-            "summary": "\u041F\u0440\u0438\u043C\u0435\u043D\u0438\u0442\u044C\u0020\u043E\u0442\u0434\u0435\u043B\u044C\u043D\u043E\u0435\u0020\u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435",
-            "url": "classes/Whatis-PhpCast-Cast.html#method_castUnit"
         },                {
             "fqsen": "\\Whatis\\PhpCast\\Cast\u003A\u003AsearchCast\u0028\u0029",
             "name": "searchCast",
@@ -191,15 +191,15 @@ Search.appendIndex(
             "summary": "\u041A\u043E\u043C\u043F\u0430\u043D\u043E\u0432\u0449\u0438\u043A\u0020\u0434\u043B\u044F\u0020\u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439",
             "url": "classes/Whatis-PhpCast-Casts-Composite.html"
         },                {
-            "fqsen": "\\Whatis\\PhpCast\\Casts\\Composite\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "\u0418\u043D\u0438\u0446\u0438\u043B\u0438\u0437\u0430\u0446\u0438\u044F\u0020\u043A\u043E\u043C\u043F\u0430\u043D\u043E\u0432\u0449\u0438\u043A\u0430",
-            "url": "classes/Whatis-PhpCast-Casts-Composite.html#method___construct"
-        },                {
             "fqsen": "\\Whatis\\PhpCast\\Casts\\Composite\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C\u0020\u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435\u0020\u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F",
             "url": "classes/Whatis-PhpCast-Casts-Composite.html#method_getName"
+        },                {
+            "fqsen": "\\Whatis\\PhpCast\\Casts\\Composite\u003A\u003AparseArguments\u0028\u0029",
+            "name": "parseArguments",
+            "summary": "\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u0430\u0442\u044C\u0020\u043F\u0435\u0440\u0435\u0434\u0430\u043D\u043D\u044B\u0435\u0020\u0430\u0440\u0433\u0443\u043C\u0435\u043D\u0442\u044B",
+            "url": "classes/Whatis-PhpCast-Casts-Composite.html#method_parseArguments"
         },                {
             "fqsen": "\\Whatis\\PhpCast\\Casts\\Composite\u003A\u003A\u0024cast",
             "name": "cast",

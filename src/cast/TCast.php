@@ -38,7 +38,7 @@ trait TCast
     /**
      * Иницилизация правила
      *
-     * @param array $arguments Приоритет
+     * @param array $arguments Аргументы
      */
     public function __construct(array $arguments = []) {
         $this->arguments = $this->parseArguments($arguments);

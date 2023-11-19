@@ -84,10 +84,32 @@ class Cast
      * @param array $casts Правила преобразования
      *
      * @return void
+     * @throw  InvalidArgumentException
      */
     public function setCasts(array $casts): void
     {
-        $this->casts = Arr::dot($casts);
+        $this->casts = array_map(
+            function ($cast) {
+                if ($cast instanceof ICast) {
+                    return $cast;
+                }
+
+                // Если массив или строка, то разбираем их
+                if (is_array($cast) || is_string($cast)) {
+                    return $this->parseCast($cast);
+                }
+
+                // Если передан неверный формат
+                // преобразователя, выкидываем
+                // исключение
+                throw new InvalidArgumentException(
+                    'Invalid passed cast type, must be '
+                        .'\'string\', \'array\' or \'ICast\' '
+                        . 'object, passed: \''
+                        . gettype($cast) . '\''
+                );
+            }, Arr::dot($casts)
+        );
     }
 
     /**
@@ -196,67 +218,6 @@ class Cast
             // то просто его и передаем
             // в преобразователь
             Arr::dotExists($key, $data) ?: yield $key;
-        }
-    }
-
-    /**
-     * Применить отдельное преобразование
-     *
-     * @param array      $data Ссылка на данные
-     * @param string|int $key  Ключ значения
-     * @param ICast      $cast Преобразователь
-     *
-     * @return void
-     */
-    protected function castUnit(
-        array &$data,
-        string|int $key,
-        ICast $cast
-    ): void {
-        // Если преобразователь принимает
-        // в себя данные по ссылке
-        if ($cast instanceof WithDataReference) {
-            $cast->setDataReference($data);
-        }
-
-        // Получаем Reflection метод для
-        // последующиего получения
-        // необходимых атрибутов
-        $class = new ReflectionClass($cast);
-
-        // Передавать ли исключительно
-        // пропущенные значения
-        $onlyMissed = $class->getAttributes(
-            Attributes\OnlyMissed::class
-        );
-
-        // Если преобразователь принимает
-        // только не значения, которые
-        // были пропущены
-        if (!$onlyMissed) {
-            // Если значение под ключём существует
-            foreach (
-                // Получаем все существующие
-                // значения и ключи к ним
-                // с использованием
-                // постановочных знаков
-                Arr::getWithWildcards(
-                    $data, $key
-                ) as $key => $value
-            ) {
-                Arr::set($data, $key, $cast->cast($value, false));
-            }
-        }
-
-        // Если допустима передача значений,
-        // которые не существуют в массиве
-        if ($onlyMissed || $class->getAttributes(
-            Attributes\WithMissed::class
-        )
-        ) {
-            foreach ($this->missedKeys($data, $key) as $key) {
-                Arr::set($data, $key, $cast->cast(null, true));
-            }
         }
     }
 
@@ -412,30 +373,51 @@ class Cast
     {
         // Перебираем преобразователи
         foreach ($this->casts as $key => $cast) {
-            // Готовый объект сразу вызываем
-            if ($cast instanceof ICast) {
-                $this->castUnit($data, $key, $cast);
-                continue;
+            // Если преобразователь принимает
+            // в себя данные по ссылке
+            if ($cast instanceof WithDataReference) {
+                $cast->setDataReference($data);
             }
 
-            // Другие доступные форматы разбираем
-            // и тоже вызываем преобразователь
-            if (is_array($cast) || is_string($cast)) {
-                $this->castUnit(
-                    $data, $key, $this->parseCast($cast)
-                );
-                continue;
-            }
+            // Получаем Reflection метод для
+            // последующиего получения
+            // необходимых атрибутов
+            $class = new ReflectionClass($cast);
 
-            // Если передан неверный формат
-            // преобразователя, выкидываем
-            // исключение
-            throw new InvalidArgumentException(
-                'Invalid passed cast type, must be '
-                    .'\'string\', \'array\' or \'ICast\' '
-                    . 'object, passed: \''
-                    . gettype($cast) . '\''
+            // Передавать ли исключительно
+            // пропущенные значения
+            $onlyMissed = $class->getAttributes(
+                Attributes\OnlyMissed::class
             );
+
+            // Если преобразователь принимает
+            // только не значения, которые
+            // были пропущены
+            if (!$onlyMissed) {
+                // Если значение под ключём существует
+                foreach (
+                    // Получаем все существующие
+                    // значения и ключи к ним
+                    // с использованием
+                    // постановочных знаков
+                    Arr::getWithWildcards(
+                        $data, $key
+                    ) as $key => $value
+                ) {
+                    Arr::set($data, $key, $cast->cast($value, false));
+                }
+            }
+
+            // Если допустима передача значений,
+            // которые не существуют в массиве
+            if ($onlyMissed || $class->getAttributes(
+                Attributes\WithMissed::class
+            )
+            ) {
+                foreach ($this->missedKeys($data, $key) as $key) {
+                    Arr::set($data, $key, $cast->cast(null, true));
+                }
+            }
         }
 
         return $data;

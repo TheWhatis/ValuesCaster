@@ -40,21 +40,21 @@ class Cast
      *
      * @var array
      */
-    public array $casts;
+    protected array $casts;
 
     /**
      * Объявленные преобразователи
      *
      * @var ?array
      */
-    public static ?array $declared = null;
+    protected static ?array $declared = null;
 
     /**
      * Объявленные преобразователи
      *
      * @var array
      */
-    public array $declaredCasts;
+    protected array $declaredCasts;
 
     /**
      * Иницилизация класса
@@ -112,6 +112,16 @@ class Cast
         );
     }
 
+    /**
+     * Получить список преобразователей
+     *
+     * @return array
+     */
+    public function getCasts(): array
+    {
+        return $this->casts;
+    }
+    
     /**
      * Добавить новый объявленный
      * преобразователь

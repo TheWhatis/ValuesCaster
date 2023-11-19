@@ -40,19 +40,9 @@ class Composite extends BaseCast
      * Преобразователь, который
      * будет использоваться
      *
-     * @var Cast
+     * @var ?Cast
      */
-    public Cast $cast;
-
-    /**
-     * Иницилизация компановщика
-     *
-     * @param array $arguments Аргументы
-     */
-    public function __construct(array $arguments = []) {
-        parent::__construct($arguments);
-        $this->cast = new Cast;
-    }
+    public ?Cast $cast = null;
 
     /**
      * Получить название преобразования
@@ -62,6 +52,25 @@ class Composite extends BaseCast
     public static function getName(): array
     {
         return [ 'compose', 'composite' ];
+    }
+
+    /**
+     * Обработать переданные аргументы
+     *
+     * Валидация переданных преобразователей
+     * в композитор
+     *
+     * @param array $arguments Аргументы
+     *
+     * @return array
+     */
+    protected function parseArguments(array $arguments): array
+    {
+        // Валидация преобразователей
+        $this->cast->setCasts($arguments);
+
+        // Возвращаем как список аргументов
+        return $this->cast->getCasts();
     }
 
     /**

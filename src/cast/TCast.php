@@ -49,7 +49,7 @@ trait TCast
      *
      * @param array $arguments Аргументы
      *
-     * @return array Обработанные аргументы
+     * @return array
      */
     protected function parseArguments(array $arguments): array
     {

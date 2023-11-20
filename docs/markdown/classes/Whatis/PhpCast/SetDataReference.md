@@ -1,6 +1,6 @@
 ***
 
-# WithDataReference
+# SetDataReference
 
 Интерфейс, реализующий
 передачу ссылки на
@@ -9,7 +9,7 @@
 Переданные данные в [\Whatis\PhpCast\Cast]()
 
 PHP version 8
-* Full name: `\Whatis\PhpCast\WithDataReference`
+* Full name: `\Whatis\PhpCast\SetDataReference`
 
 
 **See Also:**
@@ -29,7 +29,7 @@ PHP version 8
 public setDataReference(array& $data): void
 ```
 
-[\Whatis\PhpCast\Cast::castUnit]()
+[\Whatis\PhpCast\Cast::cast]()
 
 
 
@@ -49,4 +49,4 @@ public setDataReference(array& $data): void
 
 
 ***
-> Automatically generated on 2023-11-19
+> Automatically generated on 2023-11-20

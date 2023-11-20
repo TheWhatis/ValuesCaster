@@ -134,4 +134,4 @@ public cast(mixed $value): mixed
 
 
 ***
-> Automatically generated on 2023-11-19
+> Automatically generated on 2023-11-20

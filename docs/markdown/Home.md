@@ -34,7 +34,8 @@ This is an automatically generated documentation for **Documentation**.
 | Interface | Description |
 |-----------|-------------|
 | [`ICast`](./classes/Whatis/PhpCast/ICast.md) | Интерфейс правила<br />преобразования|
-| [`WithDataReference`](./classes/Whatis/PhpCast/WithDataReference.md) | Интерфейс, реализующий<br />передачу ссылки на<br />переданные данные|
+| [`KeyChange`](./classes/Whatis/PhpCast/KeyChange.md) | Файл с интерфейсом, дополняющий<br />преобразование, для того, чтобы<br />возможно было изменить ключ<br />значения в передаваемом массиве<br />(либо установить, как угодно)|
+| [`SetDataReference`](./classes/Whatis/PhpCast/SetDataReference.md) | Интерфейс, реализующий<br />передачу ссылки на<br />переданные данные|
 
 
 
@@ -68,4 +69,4 @@ This is an automatically generated documentation for **Documentation**.
 
 
 ***
-> Automatically generated on 2023-11-19
+> Automatically generated on 2023-11-20

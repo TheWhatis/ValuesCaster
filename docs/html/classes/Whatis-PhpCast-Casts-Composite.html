@@ -111,6 +111,9 @@
                             </ul>
         </div>
     
+            <span class="phpdocumentor-element__implements">
+            implements
+                            <a href="classes/Whatis-PhpCast-KeyChange.html"><abbr title="\Whatis\PhpCast\KeyChange">KeyChange</abbr></a>,                             <a href="classes/Whatis-PhpCast-SetDataReference.html"><abbr title="\Whatis\PhpCast\SetDataReference">SetDataReference</abbr></a>                    </span>
     
     </h2>
 
@@ -122,7 +125,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Composite.php"><a href="files/src-casts-composite.html"><abbr title="src/casts/Composite.php">Composite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
@@ -184,6 +187,19 @@
 
 
 
+    <h4 id="toc-interfaces">
+        Interfaces
+        <a href="classes/Whatis-PhpCast-Casts-Composite.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Whatis-PhpCast-KeyChange.html"><abbr title="\Whatis\PhpCast\KeyChange">KeyChange</abbr></a></dt><dd>Файл с интерфейсом, дополняющий
+преобразование, для того, чтобы
+возможно было изменить ключ
+значения в передаваемом массиве
+(либо установить, как угодно)</dd>            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Whatis-PhpCast-SetDataReference.html"><abbr title="\Whatis\PhpCast\SetDataReference">SetDataReference</abbr></a></dt><dd>Интерфейс, реализующий
+передачу ссылки на
+переданные данные</dd>    </dl>
 
 
 
@@ -210,6 +226,13 @@
 </dt>
 <dd>Преобразователь, который
 будет использоваться</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a href="classes/Whatis-PhpCast-Casts-Composite.html#property_data">$data</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+<dd>Ссылка на массив с данными</dd>
 
     </dl>
 
@@ -239,6 +262,21 @@
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Получить название преобразования</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Whatis-PhpCast-Casts-Composite.html#method_keyChange">keyChange()</a>
+    <span>
+                                &nbsp;: string|int    </span>
+</dt>
+<dd>Получить и, возможно,
+изменить ключ значения</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Whatis-PhpCast-Casts-Composite.html#method_setDataReference">setDataReference()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Установить ссылку на данные</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Whatis-PhpCast-Casts-Composite.html#method_parseArguments">parseArguments()</a>
@@ -312,7 +350,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Composite.php"><a href="files/src-casts-composite.html"><abbr title="src/casts/Composite.php">Composite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
@@ -323,6 +361,40 @@
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type"><a href="classes/Whatis-PhpCast-Cast.html"><abbr title="\Whatis\PhpCast\Cast">Cast</abbr></a>|null</span>
     <span class="phpdocumentor-signature__name">$cast</span>
+     = <span class="phpdocumentor-signature__default-value">null</span></code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_data">
+        $data
+        <a href="classes/Whatis-PhpCast-Casts-Composite.html#property_data" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Composite.php"><a href="files/src-casts-composite.html"><abbr title="src/casts/Composite.php">Composite.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">57</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Ссылка на массив с данными</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$data</span>
      = <span class="phpdocumentor-signature__default-value">null</span></code>
 
     
@@ -396,7 +468,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Composite.php"><a href="files/src-casts-composite.html"><abbr title="src/casts/Composite.php">Composite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 
     </aside>
 
@@ -464,7 +536,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Composite.php"><a href="files/src-casts-composite.html"><abbr title="src/casts/Composite.php">Composite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">52</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 
     </aside>
 
@@ -493,6 +565,103 @@
                     <article
         class="phpdocumentor-element
             -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_keyChange">
+        keyChange()
+        <a href="classes/Whatis-PhpCast-Casts-Composite.html#method_keyChange" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Composite.php"><a href="files/src-casts-composite.html"><abbr title="src/casts/Composite.php">Composite.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">112</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Получить и, возможно,
+изменить ключ значения</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">keyChange</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|int</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p><abbr title="\Whatis\PhpCast\Cast::cast">Cast::cast</abbr></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Ключ</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string|int</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setDataReference">
+        setDataReference()
+        <a href="classes/Whatis-PhpCast-Casts-Composite.html#method_setDataReference" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Composite.php"><a href="files/src-casts-composite.html"><abbr title="src/casts/Composite.php">Composite.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">78</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Установить ссылку на данные</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setDataReference</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$data</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p><abbr title="\Whatis\PhpCast\Cast::castUnit">Cast::castUnit</abbr></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$data</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Данные</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
             -protected
                                                         "
 >
@@ -504,7 +673,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/casts/Composite.php"><a href="files/src-casts-composite.html"><abbr title="src/casts/Composite.php">Composite.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">67</span>
+    <span class="phpdocumentor-element-found-in__line">93</span>
 
     </aside>
 
@@ -656,6 +825,7 @@
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Whatis-PhpCast-TCast.html#property_arguments">$arguments<a href="classes/Whatis-PhpCast-Casts-Composite.html"></li>
                                                     <li><a href="classes/Whatis-PhpCast-Casts-Composite.html#property_cast">$cast<a href="classes/Whatis-PhpCast-Casts-Composite.html"></li>
+                                                    <li><a href="classes/Whatis-PhpCast-Casts-Composite.html#property_data">$data<a href="classes/Whatis-PhpCast-Casts-Composite.html"></li>
                                             </ul>
                 </li>
             
@@ -665,6 +835,8 @@
                                             <li><a href="classes/Whatis-PhpCast-TCast.html#method___construct">__construct()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Casts-Composite.html#method_cast">cast()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Casts-Composite.html#method_getName">getName()</a></li>
+                                            <li><a href="classes/Whatis-PhpCast-Casts-Composite.html#method_keyChange">keyChange()</a></li>
+                                            <li><a href="classes/Whatis-PhpCast-Casts-Composite.html#method_setDataReference">setDataReference()</a></li>
                                             <li><a href="classes/Whatis-PhpCast-Casts-Composite.html#method_parseArguments">parseArguments()</a></li>
                                     </ul>
             </li>

@@ -7,6 +7,8 @@
 PHP version 8
 * Full name: `\Whatis\PhpCast\Casts\Composite`
 * Parent class: [`\Whatis\PhpCast\BaseCast`](../BaseCast.md)
+* This class implements:
+[`\Whatis\PhpCast\KeyChange`](../KeyChange.md), [`\Whatis\PhpCast\SetDataReference`](../SetDataReference.md)
 
 **See Also:**
 
@@ -24,6 +26,21 @@ PHP version 8
 
 ```php
 public ?\Whatis\PhpCast\Cast $cast
+```
+
+
+
+
+
+
+***
+
+### data
+
+Ссылка на массив с данными
+
+```php
+public mixed $data
 ```
 
 
@@ -60,6 +77,32 @@ $name Название преобразования
 
 ***
 
+### setDataReference
+
+Установить ссылку на данные
+
+```php
+public setDataReference(array& $data): void
+```
+
+[\Whatis\PhpCast\Cast::castUnit]()
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$data` | **array** | Данные |
+
+
+
+
+***
+
 ### parseArguments
 
 Обработать переданные аргументы
@@ -81,6 +124,33 @@ protected parseArguments(array $arguments): array
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$arguments` | **array** | Аргументы |
+
+
+
+
+***
+
+### keyChange
+
+Получить и, возможно,
+изменить ключ значения
+
+```php
+public keyChange(string|int $key): string|int
+```
+
+[\Whatis\PhpCast\Cast::cast]()
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$key` | **string&#124;int** | Ключ |
 
 
 
@@ -172,4 +242,4 @@ protected parseArguments(array $arguments): array
 
 
 ***
-> Automatically generated on 2023-11-19
+> Automatically generated on 2023-11-20

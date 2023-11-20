@@ -32,12 +32,12 @@ namespace Whatis\PhpCast;
  * @license  unlicense
  * @link     https://github.com/TheWhatis/PhpCast
  */
-interface WithDataReference
+interface SetDataReference
 {
     /**
      * Установить ссылку на данные
      *
-     * {@see Cast::castUnit}
+     * {@see Cast::cast}
      *
      * @param array $data Данные
      *

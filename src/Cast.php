@@ -121,7 +121,7 @@ class Cast
     {
         return $this->casts;
     }
-    
+
     /**
      * Добавить новый объявленный
      * преобразователь
@@ -184,7 +184,8 @@ class Cast
      * @return Generator
      */
     protected function missedKeys(
-        array $data, string|int $key
+        array $data,
+        string|int $key
     ): Generator {
         // Разделяем ключ на
         // сегменты
@@ -385,9 +386,13 @@ class Cast
         foreach ($this->casts as $key => $cast) {
             // Если преобразователь принимает
             // в себя данные по ссылке
-            if ($cast instanceof WithDataReference) {
+            if ($cast instanceof SetDataReference) {
                 $cast->setDataReference($data);
             }
+
+            // Проверка возможна ли передача
+            // и получения ключа в преобразователе
+            $isKeyChange = $cast instanceof KeyChange;
 
             // Получаем Reflection метод для
             // последующиего получения
@@ -414,7 +419,11 @@ class Cast
                         $data, $key
                     ) as $key => $value
                 ) {
-                    Arr::set($data, $key, $cast->cast($value, false));
+                    Arr::set(
+                        $data,
+                        $isKeyChange ? $cast->keyChange($key) : $key,
+                        $cast->cast($value, false)
+                    );
                 }
             }
 
@@ -425,7 +434,11 @@ class Cast
             )
             ) {
                 foreach ($this->missedKeys($data, $key) as $key) {
-                    Arr::set($data, $key, $cast->cast(null, true));
+                    Arr::set(
+                        $data,
+                        $isKeyChange ? $cast->keyChange($key) : $key,
+                        $cast->cast(null, true)
+                    );
                 }
             }
         }

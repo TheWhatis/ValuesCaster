@@ -17,8 +17,11 @@ namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\Cast;
 use Whatis\PhpCast\BaseCast;
-use Whatis\PhpCast\WithDataReference;
+
 use Whatis\PhpCast\Attributes;
+
+use Whatis\PhpCast\SetDataReference;
+use Whatis\PhpCast\KeyChange;
 
 use Whatis\Support\Arr;
 use InvalidArgumentException;
@@ -35,7 +38,8 @@ use InvalidArgumentException;
  * @link     https://github.com/TheWhatis/PhpCast
  */
 #[Attributes\WithMissed]
-class Composite extends BaseCast
+class Composite extends BaseCast implements KeyChange,
+    SetDataReference
 {
     /**
      * Преобразователь, который
@@ -96,6 +100,27 @@ class Composite extends BaseCast
     }
 
     /**
+     * Получить и, возможно,
+     * изменить ключ значения
+     *
+     * {@see Cast::cast}
+     *
+     * @param string|int $key Ключ
+     *
+     * @return string|int
+     */
+    public function keyChange(string|int $key): string|int
+    {
+        foreach ($this->arguments as $cast) {
+            if ($cast instanceof KeyChange) {
+                $key = $cast->keyChange($key);
+            }
+        }
+
+        return $key;
+    }
+
+    /**
      * Запускаем композитор преобразователей
      *
      * @param mixed $value Значение
@@ -115,7 +140,7 @@ class Composite extends BaseCast
             try {
                 // Если преобразователь принимает
                 // в себя данные по ссылке
-                if ($cast instanceof WithDataReference) {
+                if ($cast instanceof SetDataReference) {
                     $cast->setDataReference($this->data);
                 }
 

@@ -17,7 +17,8 @@ namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\Cast;
 use Whatis\PhpCast\BaseCast;
-use Whatis\PhpCast\Attributes\WithMissed;
+use Whatis\PhpCast\WithDataReference;
+use Whatis\PhpCast\Attributes;
 
 use Whatis\Support\Arr;
 use InvalidArgumentException;
@@ -33,7 +34,7 @@ use InvalidArgumentException;
  * @license  unlicense
  * @link     https://github.com/TheWhatis/PhpCast
  */
-#[WithMissed]
+#[Attributes\WithMissed]
 class Composite extends BaseCast
 {
     /**
@@ -45,6 +46,13 @@ class Composite extends BaseCast
     public ?Cast $cast = null;
 
     /**
+     * Ссылка на массив с данными
+     *
+     * @var mixed
+     */
+    public mixed $data = null;
+
+    /**
      * Получить название преобразования
      *
      * @return array $name Название преобразования
@@ -52,6 +60,20 @@ class Composite extends BaseCast
     public static function getName(): array
     {
         return [ 'compose', 'composite' ];
+    }
+
+    /**
+     * Установить ссылку на данные
+     *
+     * {@see Cast::castUnit}
+     *
+     * @param array $data Данные
+     *
+     * @return void
+     */
+    public function setDataReference(array &$data): void
+    {
+        $this->data = &$data;
     }
 
     /**
@@ -91,34 +113,43 @@ class Composite extends BaseCast
         // Перебираем преобразователи
         foreach ($this->arguments as $cast) {
             try {
-                // Устанавливаем очередной
-                // преобразователь
-                $this->cast->setCasts([$cast]);
+                // Если преобразователь принимает
+                // в себя данные по ссылке
+                if ($cast instanceof WithDataReference) {
+                    $cast->setDataReference($this->data);
+                }
 
-                // Если значение пропущено, то
-                // в оно не будет передано в
-                // преобразователь
-                $arr = $miss ? [] : [$value];
+                $class = new ReflectionClass($cast);
+                $onlyMissed = $class->getAttributes(
+                    Attributes\OnlyMissed::class
+                );
+
+                // Пропускаем полученное значение, если
+                // преобразователь принимает только
+                // пропущенные
+                if (!$miss && $onlyMissed) {
+                    continue;
+                }
+
+                // Пропускаем пропущенное значение, если
+                // преобразователь не принимает такие
+                if ($miss && !($onlyMissed || $class->getAttributes(
+                    Attributes\WithMissed::class
+                ))
+                ) {
+                    continue;
+                }
 
                 // Преобразовываем сгенерированный
                 // массив со значением
-                $value = $this->cast->cast($arr);
+                $value = $cast->cast($value, $miss);
 
                 // Если значение было пропущено и
                 // в следствии работы преобразователя
                 // не было получено, то в след-й
                 // преобразователь его тоже не нужно
                 // передавать
-                $miss = $miss && count($value) ?: true;
-
-                // Исключаем возможность изменения
-                // ключа для значения
-                $value = array_values($value);
-
-                // Исключаем возможного удаления
-                // элемента сгенерированного
-                // массива для преобразования ($arr)
-                $value = $value[0] ?? $arr[0] ?? null;
+                $miss = $miss && !is_null($value) ?: true;
             } catch (InvalidArgumentException $exception) {
                 if (is_object($cast)) {
                     throw new InvalidArgumentException(

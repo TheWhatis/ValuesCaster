@@ -126,4 +126,4 @@ protected parseArguments(array $arguments): array
 
 
 ***
-> Automatically generated on 2023-11-20
+> Automatically generated on 2023-11-22

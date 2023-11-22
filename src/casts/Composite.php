@@ -77,6 +77,12 @@ class Composite extends BaseCast implements KeyChange,
      */
     public function setDataReference(array &$data): void
     {
+        foreach ($this->arguments as $cast) {
+            if ($cast instanceof SetDataReference) {
+                $cast->setDataReference($data);
+            }
+        }
+
         $this->data = &$data;
     }
 
@@ -138,12 +144,6 @@ class Composite extends BaseCast implements KeyChange,
         // Перебираем преобразователи
         foreach ($this->arguments as $cast) {
             try {
-                // Если преобразователь принимает
-                // в себя данные по ссылке
-                if ($cast instanceof SetDataReference) {
-                    $cast->setDataReference($this->data);
-                }
-
                 $class = new ReflectionClass($cast);
                 $onlyMissed = $class->getAttributes(
                     Attributes\OnlyMissed::class

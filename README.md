@@ -175,7 +175,7 @@ namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\BaseCast;
 
-use Whatis\PhpCast\WithDataReference;
+use Whatis\PhpCast\SetDataReference;
 
 /**
  * Пример преобразователя
@@ -188,7 +188,7 @@ use Whatis\PhpCast\WithDataReference;
  * @license  unlicense
  * @link     https://github.com/TheWhatis/PhpCast
  */
-class WithDataReferenceExampleCast extends BaseCast implements WithDataReference
+class SetDataReferenceExampleCast extends BaseCast implements SetDataReference
 {
     /**
      * Ссылка на данные
@@ -277,7 +277,7 @@ namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\BaseCast;
 use Whatis\PhpCast\Attributes\WithMissed;
-use Whatis\PhpCast\WithDataReference;
+use Whatis\PhpCast\SetDataReference;
 
 /**
  * Пример преобразователя
@@ -291,7 +291,7 @@ use Whatis\PhpCast\WithDataReference;
  * @link     https://github.com/TheWhatis/PhpCast
  */
 #[WithMissed]
-class MissedExampleCast extends BaseCast implements WithDataReference
+class MissedExampleCast extends BaseCast implements SetDataReference
 {
     /**
      * Получить название преобразования
@@ -338,7 +338,7 @@ namespace Whatis\PhpCast\Casts;
 
 use Whatis\PhpCast\BaseCast;
 use Whatis\PhpCast\Attributes\OnlyMissed;
-use Whatis\PhpCast\WithDataReference;
+use Whatis\PhpCast\SetDataReference;
 
 /**
  * Пример преобразователя
@@ -352,7 +352,7 @@ use Whatis\PhpCast\WithDataReference;
  * @link     https://github.com/TheWhatis/PhpCast
  */
 #[OnlyMissed]
-class OnlyMissedExampleCast extends BaseCast implements WithDataReference
+class OnlyMissedExampleCast extends BaseCast implements SetDataReference
 {
     /**
      * Получить название преобразования

@@ -1,7 +1,7 @@
 {
-    "name": "whatis/php-cast",
-    "version": "3.2.1",
-    "description": "Библиотека для создания своих правил преобразования",
+    "name": "whatis/values-caster",
+    "version": "1.0.0",
+    "description": "Библиотека для создания своих преобразователей/конвертеров (заклинаний - spells)",
     "type": "library",
     "license": "unlicense",
     "keywords": [
@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "whatis/support-arr": "^1.1.9"
+        "whatis/support-arr": "^1.2.0"
     },
     "require-dev": {
         "php": "^8.2",
@@ -22,9 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Whatis\\PhpCast\\": ["src/", "src/cast"],
-            "Whatis\\PhpCast\\Casts\\": "src/casts",
-            "Whatis\\PhpCast\\Attributes\\": "src/attributes"
+            "Whatis\\ValuesCaster\\": "src/"
         }
     },
     "authors": [

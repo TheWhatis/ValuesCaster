@@ -41,8 +41,6 @@ use Whatis\ValuesCaster\ISpellConstructStub;
  */
 class ToChangeString implements ISpell
 {
-    use ISpellConstructStub;
-
     /**
      * Преобразовать в массив
      *

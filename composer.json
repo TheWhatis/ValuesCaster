@@ -17,7 +17,6 @@
         "whatis/support-arr": "^1.2.0"
     },
     "require-dev": {
-        "php": "^8.2",
         "whatis/phpdocumentor-markdown": "^0.1.7"
     },
     "autoload": {

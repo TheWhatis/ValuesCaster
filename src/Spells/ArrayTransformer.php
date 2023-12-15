@@ -197,12 +197,16 @@ class ArrayTransformer implements ISpell
             );
 
             if (!$context->shouldSkip()) {
-                $array = $context->getArray() ?? $array;
-                $key = $context->getKey();
-                Arr::set($array, $key, $converted);
+                if ($key !== $context->getKey()
+                    && !$context->isMissed()
+                ) {
+                    $context->unset($key);
+                }
+
+                $context->set($context->getKey(), $converted);
             }
 
-            return $array;
+            return $context->getArray() ?? $array;
         }
 
         // Если это обычный преобразователь, то
@@ -213,9 +217,9 @@ class ArrayTransformer implements ISpell
 
         // Иначе по-стандарту применяем преобразования
         // и сразу присваиваем значение
-        Arr::set($array, $key, $spell->cast($value));
+        $context->set($key, $spell->cast($value));
 
-        return $array;
+        return $context->getArray();
     }
 
     /**

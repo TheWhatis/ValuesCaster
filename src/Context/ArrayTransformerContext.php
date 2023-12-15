@@ -69,35 +69,22 @@ class ArrayTransformerContext extends BaseExecutionContext
     /**
      * Иницилизация класса
      *
-     * @param ArrayTransformer $arrayTransformer Корневой объект
-     * @param array            $array            Общий массив
-     * @param string|int       $key              Используемый ключ
-     * @param bool             $missedFlag       Флаг о том, что
-     *                                           значение пропущено
+     * @param ArrayTransformer $root   Корневой объект
+     * @param array            $array  Общий массив
+     * @param string|int       $key    Используемый ключ
+     * @param bool             $missed Флаг о том, что значение
+     *                                 пропущено
      */
     public function __construct(
-        ArrayTransformer $arrayTransformer,
+        ArrayTransformer $root,
         array $array,
         string|int $key,
-        bool $missedFlag
+        bool $missed
     ) {
-        $this->setRoot($arrayTransformer);
+        $this->setRoot($root);
         $this->setArray($array);
         $this->setKey($key);
-        $this->missed($missedFlag);
-    }
-
-    /**
-     * Установить флаг что значение
-     * не было пропущено
-     *
-     * @param bool $flag Флаг
-     *
-     * @return void
-     */
-    public function missed(bool $flag): void
-    {
-        $this->missed = $flag;
+        $this->missed = $missed;
     }
 
     /**

@@ -25,9 +25,6 @@ namespace Whatis\Example\Spells;
 // Основной интерфейс
 use Whatis\ValuesCaster\ISpell;
 
-// Заглушка для метода, принимающего аргументы (конструктора)
-use Whatis\ValuesCaster\ISpellConstructStub;
-
 /**
  * Преобразовать в строку 'change'
  *
